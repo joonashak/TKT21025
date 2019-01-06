@@ -1,0 +1,16 @@
+Joonass-MacBook-Pro:Exercises joonas$ docker run -d -it --name ub ubuntu
+6acccd3abc9740ea0990927aa7a52c6ced9cabd8323531e9758b81e22ebef132
+Joonass-MacBook-Pro:Exercises joonas$ docker exec ub apt-get updates
+...
+Joonass-MacBook-Pro:Exercises joonas$ docker exec -it ub apt-get install curl
+...
+Joonass-MacBook-Pro:Exercises joonas$ docker exec -it ub sh -c 'read website; sleep 3; curl http://$website;'
+helsinki.fi
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+Joonass-MacBook-Pro:Exercises joonas$ 
