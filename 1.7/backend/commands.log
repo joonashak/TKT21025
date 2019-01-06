@@ -1,0 +1,2 @@
+Joonass-MacBook-Pro:1.6 joonas$ docker build -t be .
+Joonass-MacBook-Pro:backend joonas$ docker run -d -p 8000:8000 be
