@@ -1,0 +1,4 @@
+Joonass-MacBook-Pro:Exercises joonas$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+Joonass-MacBook-Pro:Exercises joonas$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
