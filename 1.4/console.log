@@ -1,0 +1,25 @@
+Joonass-MacBook-Pro:1.4 joonas$ docker build -t curler .
+Sending build context to Docker daemon  3.072kB
+Step 1/4 : FROM ubuntu:16.04
+ ---> b0ef3016420a
+Step 2/4 : RUN apt-get update && apt-get install -y curl
+ ---> Using cache
+ ---> 2a014da51052
+Step 3/4 : COPY curling.sh .
+ ---> Using cache
+ ---> cb3c04f30bf1
+Step 4/4 : CMD ["/bin/bash"]
+ ---> Using cache
+ ---> 54e6f4012556
+Successfully built 54e6f4012556
+Successfully tagged curler:latest
+Joonass-MacBook-Pro:1.4 joonas$ docker run -it curler ./curling.sh
+helsinki.fi
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+Joonass-MacBook-Pro:1.4 joonas$ 
