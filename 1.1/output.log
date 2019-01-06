@@ -1,0 +1,5 @@
+Joonass-MacBook-Pro:Exercises joonas$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                          PORTS               NAMES
+a2945e053a7c        nginx               "nginx -g 'daemon of…"   2 minutes ago       Exited (0) About a minute ago                       suspicious_yalow
+b13be519cdab        nginx               "nginx -g 'daemon of…"   2 minutes ago       Exited (0) About a minute ago                       elastic_pike
+ee8d2bb46b32        nginx               "nginx -g 'daemon of…"   2 minutes ago       Up 2 minutes                    80/tcp              affectionate_goldwasser
