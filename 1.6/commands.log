@@ -1,0 +1,2 @@
+Joonass-MacBook-Pro:1.6 joonas$ docker build -t be .
+Joonass-MacBook-Pro:1.6 joonas$ docker run -v "/Users/joonas/kurssit/TKT21025 DevOps with Docker/Exercises/1.6/logs.txt:/logs.txt" -d -p 8000:8000 be
