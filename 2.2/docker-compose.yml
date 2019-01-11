@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  backend:
+    build: ./backend
+    environment:
+      FRONT_URL: http://localhost:5000
+      REDIS: redis
+      REDIS_PORT: 6379
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
+    networks:
+      - redis-net
+    command: npm start
+
+  frontend:
+    build: ./frontend
+    environment:
+      API_URL: http://localhost:8000 
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    command: npm start
+
+  redis:
+    image: redis
+    hostname: redis
+    networks:
+      - redis-net
+    command: redis-server
+
+networks:
+  redis-net:
