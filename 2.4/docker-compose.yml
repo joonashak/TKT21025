@@ -1,0 +1,30 @@
+version: '3.5'
+
+volumes:
+  imgs:
+  model:
+
+services:
+  training:
+    build: ./training
+    volumes:
+      - imgs:/src/imgs
+      - model:/src/model
+
+  backend:
+    build: ./backend
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    depends_on:
+      - training
+    volumes:
+      - model:/src/model
+
+  frontend:
+    build: ./frontend 
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
